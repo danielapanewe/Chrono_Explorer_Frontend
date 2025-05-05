@@ -1,0 +1,17 @@
+<div class="event_container text-(--color-secondary)">
+    <div class="text-2xl font-bold text-white px-8 pt-8 mb-6 font-[Open_Sans]">CHRONOLOUVRE.</div>
+    <h2 class="title text-xl sm:text-3xl text-center font-bold mb-14 mt-12">EVENEMENTS HISTORIQUES</h2>
+    <div   class="grid sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 mx-4 sm:mx-14 items-center">
+       <div *ngFor="let evt of event" class="flex flex-col items-center">
+        <div  [ngStyle]="{
+            'background-image': 'url(' + evt.image_url   + ')'
+          }" class="rounded-xl  shadow-sm mb-6 flex flex-col place-content-between gap-[15rem] w-[80%]  bg-cover bg-top bg-no-repeat">
+            <p class="title text-center text-xl sm:text-2xl font-semibold mt-2">{{evt.date_end}} - {{evt.date_start}}</p>
+            <button (click)="viewEventDetails(evt.id)" class="bg-[#2d030399]  border border-[#F2EDD7] mb-6 mx-8 py-2 hover:bg-[#2d0303] cursor-pointer ">+info</button>
+        </div>
+
+        <p class="text-lg text-center sm:text-xl font-semibold capitalize">{{evt.title}}</p>
+       </div>
+    </div>
+</div>
+

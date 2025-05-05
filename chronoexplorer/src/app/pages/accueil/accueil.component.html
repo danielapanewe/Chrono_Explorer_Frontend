@@ -1,0 +1,58 @@
+<div class="accueil_container relative">
+<div class="container">
+<div class="text-2xl font-bold text-white px-8 pt-8 font-[Open_Sans]">CHRONOLOUVRE.</div>
+<div class="container_text w-full px-8 text-center text-(--color-secondary) title flex flex-col justify-center items-center m-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <p class="text-base title lg:text-2xl ">Bienvenue au</p>
+    <h2 class="text-2xl font-semibold uppercase lg:text-[4rem]  ">Musée de louvre</h2>
+    <p class="text-base title lg:text-2xl ">Découvrez les périodes historiques majeures qui ont façonné notre monde </p>
+    <div (click)="openMenu()" class="w-18 h-18 mt-4 rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
+       <p> &rarr;</p>
+    </div>
+</div>
+</div>
+</div>
+<!-- Menu -->
+<div
+  *ngIf="isMenuOpen"
+  class="fixed inset-0 z-50  menu_container"
+  
+>
+ 
+   <div class="flex place-content-between px-8 pt-8 items-center">
+    <div class="text-2xl font-bold text-white   font-[Open_Sans]">CHRONOLOUVRE.</div>
+    <button
+    (click)="closeMenu()"
+    class="font-[Open_Sans] text-4xl  text-white rounded hover:text-[#F2EDD7] cursor-pointer"
+    >
+    ×
+</button>
+</div>
+  <ul class="uppercase text-(--color-secondary)  px-12 flex flex-col gap-6 absolute top-1/2 -translate-y-1/2 w-full">
+    <li class="flex place-content-between items-center border-b pb-1">
+        <p class="title text-xl md:text-2xl font-semibold">A propos du musée</p>
+        <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
+            <p> &rarr;</p>
+         </div>
+    </li>
+    <li class="flex place-content-between items-center border-b pb-1" routerLink="/evenement">
+        <p class="title text-xl md:text-2xl font-semibold"  >Evènements historiques</p>
+        <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
+            <p> &rarr;</p>
+         </div>
+    </li>
+    <li class="flex place-content-between items-center border-b pb-1">
+        <p class="title text-xl md:text-2xl font-semibold">Archives</p>
+        <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
+            <p> &rarr;</p>
+         </div>
+    </li>
+    <li class="flex place-content-between items-center border-b pb-1">
+        <p class="title text-xl md:text-2xl font-semibold">Contact</p>
+        <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
+            <p> &rarr;</p>
+         </div>
+    </li>
+   
+  </ul>
+  </div>
+

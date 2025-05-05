@@ -1,0 +1,14 @@
+.event_container{
+
+        background-image:  linear-gradient(
+            to bottom, 
+            rgba(45, 3, 3, 0.6),  
+            rgba(18 , 1, 1,0.9)     
+          ), url('/chrono6.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; 
+        width: 100%;
+        
+}

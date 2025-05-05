@@ -1,0 +1,10 @@
+.eventdetail_container{
+
+    background-image: url('/chronobgdetail.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    width: 100%;
+    
+}
