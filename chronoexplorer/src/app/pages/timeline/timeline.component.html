@@ -1,0 +1,32 @@
+
+
+<div class="timeline_container">
+    <div class="bg-[#2d0303] pt-0">
+      <app-menu></app-menu>
+    </div>
+  
+    <div class=" mx-auto mt-10 p-4 shadow-lg rounded-2xl">
+      <h2 class="text-4xl font-bold text-center mb-6 text-gray-800 title">
+        Frises chronologiques historiques
+      </h2>
+  
+      <!-- ✅ Ajouter un conteneur scroll horizontal -->
+      <div class="overflow-x-auto w-full">
+        <ngx-timeline
+          [events]="events"
+          [langCode]="'fr'"
+          [enableAnimation]="true"
+          [orientation]="orientation"
+          
+         
+        ></ngx-timeline>
+
+          <!-- 👇 Template personnalisé pour chaque événement 
+          <ng-template #eventCustomTemplate let-event=event let-colSidePosition=colSidePosition>
+            <div class="event" (click)="handleClick(event)">
+              {{event | json}}
+            </div>
+          </ng-template>-->
+      </div>
+    </div>
+  </div>

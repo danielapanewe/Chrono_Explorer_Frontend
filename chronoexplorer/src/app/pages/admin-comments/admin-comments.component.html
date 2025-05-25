@@ -1,0 +1,60 @@
+<div class="p-4">
+    <h2 class="text-2xl font-bold mb-4">Liste des commentaires</h2>
+  <div class="overflow-x-auto">
+
+      <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="text-center py-2 px-4">Auteur</th>
+            <th class="text-center py-2 px-4">Contenu</th>
+            <th class="text-center py-2 px-4">Statut</th>
+            <th class="text-center py-2 px-4">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let commentaire of commentaires" class="border-b hover:bg-gray-50 text-center">
+            <td class="py-2 px-4">{{ commentaire.user_id }}</td>
+            <td class="py-2 px-4">{{ commentaire.content }}</td>
+            <td class="py-2 px-4">
+                <span
+                  [ngClass]="{
+                    'text-green-600 font-semibold': commentaire.isApproved,
+                    'text-yellow-500': !commentaire.isApproved
+                  }">
+                  {{ commentaire.isApproved ? 'Validé' : 'En attente' }}
+                </span>
+              </td>
+            <td class="py-2 px-4">
+              <div class="flex gap-2 items-center justify-center">
+              
+                <!-- Valider -->
+                <button (click)="approveComment(commentaire.id)" 
+                [disabled]="commentaire.isApproved" 
+                [ngClass]="{
+                    'opacity-30 bg-red cursor-not-allowed': commentaire.isApproved,
+                    'hover:text-green-700': !commentaire.isApproved
+                  }"
+                title="Valider">
+                  <svg class="w-5 h-5 text-green-500 hover:text-green-700" 
+                  [ngClass]="{ 'text-gray-400': commentaire.isApproved }"
+                  fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                </button>
+    
+                <!-- Supprimer -->
+                <button (click)="deleteComment(commentaire.id)"  title="Supprimer">
+                  <svg class="w-5 h-5 text-red-500 hover:text-red-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  </div>
+  

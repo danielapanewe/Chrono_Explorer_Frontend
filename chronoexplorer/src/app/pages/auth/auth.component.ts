@@ -15,7 +15,7 @@ export class AuthComponent {
   username: string = '';
   email: string = '';
   password: string = '';
-  role: string = '';
+  role: string = 'user';
   createdUser: User | null = null;
   isLoginMode = true;
 
@@ -27,6 +27,8 @@ export class AuthComponent {
         (response) => {
           console.log('Réponse API:', response);
           localStorage.setItem('token', response.token); 
+          localStorage.setItem('userid', response.user.id); 
+          localStorage.setItem('role', response.user.role); 
           this.router.navigateByUrl("/accueil");
           
         },
@@ -40,11 +42,13 @@ export class AuthComponent {
       this.authservice.createUser(this.username, this.email, this.password, this.role).subscribe(
         (response) => {
           console.log('Utilisateur créé avec succès :', response);
-          console.log(response)
+          
           this.createdUser = response.user; 
           console.log(this.createdUser)
           localStorage.setItem('token', response.user.token); 
-          this.router.navigateByUrl("/accueil");
+          localStorage.setItem('role', response.user.role); 
+          this.isLoginMode=true;
+          
           
         },
         (error) => {

@@ -1,6 +1,7 @@
 <div class="accueil_container relative">
+    <app-menu></app-menu>
 <div class="container">
-<div class="text-2xl font-bold text-white px-8 pt-8 font-[Open_Sans]">CHRONOLOUVRE.</div>
+
 <div class="container_text w-full px-8 text-center text-(--color-secondary) title flex flex-col justify-center items-center m-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
     <p class="text-base title lg:text-2xl ">Bienvenue au</p>
     <h2 class="text-2xl font-semibold uppercase lg:text-[4rem]  ">Musée de louvre</h2>
@@ -29,25 +30,25 @@
 </div>
   <ul class="uppercase text-(--color-secondary)  px-12 flex flex-col gap-6 absolute top-1/2 -translate-y-1/2 w-full">
     <li class="flex place-content-between items-center border-b pb-1">
-        <p class="title text-xl md:text-2xl font-semibold">A propos du musée</p>
+        <p class="title text-xl md:text-2xl font-semibold cursor-pointer">A propos du musée</p>
         <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
             <p> &rarr;</p>
          </div>
     </li>
     <li class="flex place-content-between items-center border-b pb-1" routerLink="/evenement">
-        <p class="title text-xl md:text-2xl font-semibold"  >Evènements historiques</p>
+        <p class="title text-xl md:text-2xl font-semibold cursor-pointer"  >Evènements historiques</p>
+        <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
+            <p> &rarr;</p>
+         </div>
+    </li>
+    <li class="flex place-content-between items-center border-b pb-1" routerLink="/timeline">
+        <p class="title text-xl md:text-2xl font-semibold cursor-pointer">Timeline</p>
         <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
             <p> &rarr;</p>
          </div>
     </li>
     <li class="flex place-content-between items-center border-b pb-1">
-        <p class="title text-xl md:text-2xl font-semibold">Archives</p>
-        <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
-            <p> &rarr;</p>
-         </div>
-    </li>
-    <li class="flex place-content-between items-center border-b pb-1">
-        <p class="title text-xl md:text-2xl font-semibold">Contact</p>
+        <p class="title text-xl md:text-2xl font-semibold cursor-pointer">Contact</p>
         <div  class="w-15 h-15  rounded-full border-1 border-(--color-secondary) flex items-center justify-center cursor-pointer transform hover:scale-90 transition-transform duration-300 ease-in-out">
             <p> &rarr;</p>
          </div>
@@ -55,4 +56,5 @@
    
   </ul>
   </div>
+
 

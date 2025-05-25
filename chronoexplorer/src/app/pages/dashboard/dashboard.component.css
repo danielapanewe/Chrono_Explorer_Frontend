@@ -1,11 +1,16 @@
-.eventdetail_container{
+.aside {
+    transition: width 0.3s ease;
+  }
+
+
+  .dashboard_container{
 
     background-image: url('/chronobgdetail.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
    height: 100vh;
-   overflow-y: scroll;
+ /*  overflow-y: scroll;*/
     width: 100%;
     
 }

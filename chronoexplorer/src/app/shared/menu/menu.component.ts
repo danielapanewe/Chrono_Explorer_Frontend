@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MenuComponent } from "../../shared/menu/menu.component";
 
 @Component({
-  selector: 'app-accueil',
-  imports: [CommonModule, RouterModule, MenuComponent],
-  templateUrl: './accueil.component.html',
-  styleUrl: './accueil.component.css'
+  selector: 'app-menu',
+  imports: [CommonModule,RouterModule],
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.css'
 })
-export class AccueilComponent {
+export class MenuComponent {
   isMenuOpen = false;
+  isProfileOpen = false;
 
   openMenu() {
     this.isMenuOpen  = true;
@@ -19,4 +19,10 @@ export class AccueilComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  openProfile() {
+    this.isProfileOpen  = !this.isProfileOpen;
+  }
+
+ 
 }

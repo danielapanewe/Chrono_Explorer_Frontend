@@ -30,5 +30,9 @@ export class AuthService {
       };
       return this.http.post<any>("http://localhost:3000/api/auth/login", body );
     }
+
+    getUserById(id: number): Observable<any> {
+      return this.http.get<any>(`http://localhost:3000/api/users/${id}`);
+    }
   
 }
